@@ -1,0 +1,31 @@
+{
+  "name": "euge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "contentful": "^9.0.0",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^6.2.9",
+    "next": "^15.0.3",
+    "nodemailer": "^6.7.3",
+    "postcss": "^8.4.47",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.33.1",
+    "sass": "^1.38.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "eslint": "7.29.0",
+    "eslint-config-next": "11.0.0",
+    "typescript": "^5.6.3"
+  }
+}

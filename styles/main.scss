@@ -1,0 +1,32 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/utils";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./layouts/navbar";
+@import "./layouts/footer";
+@import "./components/skills";
+@import "./components/forms";
+@import "./components/buttons";
+@import "./components/featuredItem";
+@import "./components/experienceItem";
+@import "./components/testimonials";
+@import "./components/about";
+@import "./components/contact";
+@import "./components/cards";
+@import "./components/tags";
+@import "./components/shapes";
+
+@import "./pages/home";
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+
+  @include respond(phone) {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}

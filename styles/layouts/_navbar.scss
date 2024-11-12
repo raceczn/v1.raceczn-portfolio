@@ -1,0 +1,94 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999999;
+	padding-right: 14rem;
+	padding-left: 14rem;
+
+	// background-color: transparent;
+	background-color: rgba(var(--navbar-bg), 0.7);
+	backdrop-filter: blur(8px);
+	height: 9.2rem;
+	transition: height 0.3s ease-in-out;
+
+		@include respond(phone){
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+	&__container {
+		position: relative;
+		max-width: $max-width;
+		display: flex;
+		margin: 0 auto;
+
+		align-items: center;
+		// justify-content: space-between;
+		height: 100%;
+		font-size: 1.6rem;
+		font-family: "Kanit";
+		font-weight: 300;
+
+		letter-spacing: 0.6px;
+
+		backdrop-filter: blur(100px);
+	}
+
+	&__nav {
+		margin-left: auto;
+		// background-color: red;
+	}
+	&__name {
+		@include respond(phone) {
+			margin-left: 3.2rem;
+		}
+	}
+
+	&__toggle {
+		@include respond(phone) {
+			margin-right: 3.2rem;
+		}
+	}
+
+	&__nav-list {
+		display: flex;
+
+		& > * {
+			margin-left: 2.8rem;
+		}
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+
+	&__link {
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	&__toggle {
+		// padding: 1rem;
+		border: none;
+		background-color: transparent;
+		color: var(--text-color);
+		font-size: 2.6rem;
+		cursor: pointer;
+		// background-color: blue;
+		display: flex;
+		align-items: center;
+		margin-left: 2.4rem;
+	}
+
+	&.scroll-down {
+		top: -100%;
+	}
+
+	&.scroll-up {
+		height: 6.4rem;
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	}
+}

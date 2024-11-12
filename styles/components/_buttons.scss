@@ -1,0 +1,82 @@
+.btn {
+	position: relative;
+	border: none;
+	color: white;
+	font-family: 'Cascadia Code';
+	// text-transform: lowercase;
+	cursor: pointer;
+	font-size: 1.6rem;
+	z-index: 1;
+	display: inline-block;
+
+	&__primary {
+		background-color: var(--accent);
+		padding: 1.2rem 2.4rem;
+		border-radius: 0.6rem;
+		// color: $dark;
+		font-weight: 500;
+	}
+
+	&__link {
+		background-color: var(--bg-color-2);
+		height: 4.8rem;
+		width: 4.8rem;
+		border-radius: 4rem;
+		font-size: 2rem;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+		}
+	}
+}
+
+.btn__primary::before {
+	content: '';
+	position: absolute;
+	top: -2%;
+	left: -2%;
+	border: 1px solid var(--accent);
+	height: 105%;
+	width: 105%;
+	border-radius: 0.6rem;
+	color: white;
+	transform: rotateZ(-2.8deg);
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn__primary:disabled,
+.btn__primary[disabled] {
+	cursor: not-allowed;
+	
+}
+
+.btn__link::before {
+	content: '';
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	border: 1px solid var(--bg-color-2);
+	background: transparent;
+	height: 104%;
+	width: 104%;
+	border-radius: 4rem;
+	z-index: -1;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social__links > a:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.not-deployed{
+	color: rgb(222, 221, 221);
+	background-color: hsl(149, 38%, 78%);
+
+}

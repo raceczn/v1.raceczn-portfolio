@@ -1,0 +1,145 @@
+.featured{
+  padding-top: 15rem;
+
+	&__actions {
+		display: flex;
+		align-items: flex-start;
+		margin-top: 2.2rem;
+
+		& > * {
+			margin-right: 2rem;
+		}
+	}
+	&__item {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 10rem 0;
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin: 16rem 0;
+        width: 100%; 
+        left: 0%;      
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -7%;
+        left: 7%;
+        height: 115%;
+        width: 91%;
+        background-color: var(--bg-color-4);
+        z-index: -1;
+        border-radius: $border-rad;
+
+        @include respond(phone) {
+            left: 0; // Ensures left is 0 on phone (if needed for after element)
+            width: 100%; // Ensures the width of the pseudo-element is 100% on phone
+						top: -2%;
+            height: 110%;
+						transform: rotateZ(0deg);
+
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -8%;
+        left: 7%;
+        height: 115%;
+        width: 90%;
+        border: 2px solid var(--bg-color-4);
+        z-index: -1;
+        border-radius: $border-rad;
+        transform: rotateZ(-1deg);
+
+        @include respond(phone) {
+            left: 0;
+						top: -3%;
+            width: 100%; 
+            height: 110%;
+						transform: rotateZ(0deg);
+
+        }
+    }
+}
+
+
+.tags{
+  font-size: 1.3rem;
+  @include respond(phone) {
+    font-size: 1rem;
+
+}
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .featured__content {
+    padding: 12px; /* Padding of 10px for mobile screens */
+  }
+}
+
+
+
+	&__img-container {
+		width: 50%;
+		padding-right: 2.4rem;
+		@include respond(phone) {
+			width: unset;
+			padding: 0;
+		}
+		img {
+			border-radius: 1.8rem;
+		}
+	}
+
+	&__content {
+		width: 45%;
+
+		@include respond(phone) {
+			width: unset;
+		}
+	}
+}
+
+.light {
+	.featured__item {
+		&::after {
+			background-color: hsla(151, 100%, 10%, 0.032);
+		}
+
+		&::before {
+			border: 2px solid hsla(151, 100%, 10%, 0.089);
+		}
+	}
+}
+
+
+.slanted-image {
+  transform: perspective(500px) rotate3d(1, 1, 0, 3deg); /* Default slant effect */
+  transition: transform 0.3s ease; /* Smooth transition for the 3D slant effect */
+}
+
+/* Hover effect to reset the slant */
+.slanted-image:hover {
+  transform: perspective(500px) rotate3d(1, 1, 0, 4deg); /* More slant on hover */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .slanted-image {
+    padding: 10px;
+    transform: none; /* Remove 3D slant on mobile devices */
+    transition: none; /* Disable transition on mobile for smoother performance */
+  }
+
+  .slanted-image:hover {
+    transform: none; /* Ensure the hover effect is also removed on mobile */
+  }
+}
+

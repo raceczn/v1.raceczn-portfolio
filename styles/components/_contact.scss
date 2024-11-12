@@ -1,0 +1,67 @@
+.contact {
+  margin: -7rem auto;
+  margin-bottom: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+
+  &__img {
+    min-width: 280px;
+    max-width: 280px;
+    align-self: center;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  @include respond(phone) {
+    margin: -7rem 1rem 15rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    padding-top: 9.4rem;
+    padding-bottom: 9.4rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(117, 116, 116);
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+
+
+  h2 {
+    margin-bottom: 2.4rem;
+  }
+
+  .triangle2 {
+    bottom: 10%;
+    right: 41%;
+  }
+
+  .triangle {
+    bottom: 10%;
+    right: 40%;
+  }
+}
+
+.contact__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+}

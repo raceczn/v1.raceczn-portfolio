@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	@include respond(tab-port) {
+		// width < 900?
+		font-size: 50%; //1 rem = 8px, 8/16 = 50%
+	}
+}
+
+body {
+	box-sizing: border-box;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	overflow-x: hidden;
+}
+
+section {
+	padding-top: 4rem;
+	max-width: $max-width;
+	margin: 0 auto;
+	@include respond(phone) {
+		padding: 0 3.2rem;
+		padding-top: 8rem;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.light {
+	a {
+		font-weight: 500;
+	}
+
+	p {
+		font-weight: 400;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+p {
+	font-family: "Kanit";
+	font-weight: 300;
+	opacity: 70%;
+}
+
+

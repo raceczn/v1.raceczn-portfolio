@@ -1,0 +1,120 @@
+/* Default (Light Mode) Styling */
+.skills {
+  padding: 15rem 5rem 5rem 0rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+    gap: 1.5rem; /* Original gap between items */
+    justify-items: center;
+    margin-top: 2rem;
+    padding: -2rem 0rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    background-color: hsla(151, 100%, 10%, 0.032);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative; /* Make sure the after pseudo-element positions relative to the card */
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills__icon {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    /* Add the ::after pseudo-element */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 2px solid var(--bg-color-4);
+      height: 102%;
+      width: 102%;
+      transform: rotateZ(-1.5deg);
+      border-radius: $border-rad; /* Assuming $border-rad is defined */
+      z-index: -1; /* Ensure it's behind the content */
+    }
+  }
+
+  /* Dark Mode Adjustments */
+  .dark & {
+    background-color: hsl(0, 0%, 9%); /* Dark background for section */
+    color: hsl(0, 0%, 96%); /* Light text color */
+  }
+
+  .dark &__card {
+    background-color: $dark-4; 
+    color: var(--text-color);
+    box-shadow: 0 2px 6px rgba(42, 28, 28, 0.1); 
+  }
+
+  .dark .skills__icon {
+    filter: invert(1); 
+  }
+
+  .dark span {
+    color: var(--text-color);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    padding: 10rem 2rem 3rem 0rem;
+
+    &__container {
+      grid-template-columns: repeat(5, 1fr); /* 5 items per row on medium screens */
+      padding: 3rem;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 8rem 1.5rem 2rem 0rem;
+
+    &__container {
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row on small screens */
+      padding: 2rem;
+      gap: 1rem;
+    }
+
+    &__card {
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    padding: 5rem 1rem 1rem 0rem;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.2rem;
+    }
+
+    &__card {
+      padding: 1rem 2rem;
+    }
+  }
+}

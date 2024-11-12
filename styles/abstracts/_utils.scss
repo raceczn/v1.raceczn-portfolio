@@ -1,0 +1,21 @@
+.d-grid {
+	display: grid;
+	// grid-auto-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+// .wrapper {
+// 	max-width: $max-width;
+// 	margin: 0 auto;
+// }
+
+.d-flex {
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+}
+
+.mb-2 {
+	margin-bottom: 2rem;
+}

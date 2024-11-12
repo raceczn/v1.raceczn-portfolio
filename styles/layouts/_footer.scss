@@ -1,0 +1,39 @@
+.footer {
+	padding: 5rem 0;
+	span {
+		font-family: "Arial";
+	}
+	&__container {
+		max-width: $max-width;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
+	}
+	h5 {
+		font-size: 1.6rem;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include respond(phone) {
+			margin-top: 4rem;
+		}
+	}
+	.site-author {
+		svg {
+			fill: var(--text-color);
+			width: 18px;
+			margin: 0 4px;
+		}
+	}
+
+	&__links > a:not(:last-child) {
+		margin-right: 1rem;
+	}
+}

@@ -1,0 +1,22 @@
+.tags {
+	& > *:not(:last-child) {
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+	.tag {
+		color: var(--text-color);
+		// font-size: 1.6rem;
+		background-color: var(--bg-color-3);
+		border-radius: $border-rad;
+		padding: 0.4rem 1rem;
+		display: inline-block;
+		font-family: "Cascadia Code";
+	}
+}
+
+.light {
+	.tag {
+		// border: 1px solid hsla(151, 100%, 10%, 0.151);
+		background-color: hsla(151, 100%, 10%, 0.151);
+	}
+}

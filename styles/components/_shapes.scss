@@ -1,0 +1,39 @@
+.triangle {
+	position: absolute;
+
+	// left: 32.3%;
+	// bottom: 8%;
+	height: 60px;
+	width: 60px;
+	z-index: 1;
+
+	background-color: rgb(100, 100, 100);
+	clip-path: polygon(52% 16%, 0% 100%, 100% 100%);
+	transform: rotateZ(30deg);
+	opacity: $shape-opacity;
+	// overflow: hidden;
+
+	@include respond(phone) {
+		display: none;
+		// transform: rotateZ(-30deg);
+		// opacity: $shape-opacity;
+	}
+}
+
+.triangle2 {
+	position: absolute;
+	// left: 32.8%;
+	// bottom: 10%;
+	height: 60px;
+	width: 60px;
+	background-color: $accent;
+	clip-path: polygon(52% 16%, 0% 100%, 100% 100%);
+	transform: rotateZ(30deg);
+	opacity: $shape-opacity;
+
+	@include respond(phone) {
+		display: none;
+		// transform: rotateZ(-30deg);
+		// opacity: $shape-opacity;
+	}
+}

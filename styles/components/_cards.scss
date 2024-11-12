@@ -1,0 +1,57 @@
+.card__list {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3.2rem;
+
+	@include respond(phone) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.card {
+	background-color: var(--bg-color-4);
+	padding: 1.6rem 2.4rem;
+	border-radius: $border-rad;
+	position: relative;
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 2rem;
+
+		& > * {
+			margin-left: 1rem;
+		}
+	}
+
+	.heading__5 {
+		font-size: 1.6rem;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 2px solid var(--bg-color-4);
+		height: 102%;
+		width: 102%;
+		// border-radius: 4rem;
+		color: white;
+		transform: rotateZ(-1.5deg);
+		border-radius: $border-rad;
+		z-index: -1;
+	}
+}
+
+.light {
+	.card {
+		background-color: hsla(151, 100%, 10%, 0.032);
+
+		&::after {
+			border: 2px solid hsla(151, 100%, 10%, 0.09);
+		}
+	}
+}
