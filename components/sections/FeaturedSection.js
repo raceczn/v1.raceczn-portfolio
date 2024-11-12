@@ -45,9 +45,9 @@ export default function FeaturedSection() {
       sys: { id: "2" },
       fields: {
         title: "Fighero",
-        subtitle: "Interactive Web for Fighero Built with Framer",
+        subtitle: "Interactive Web Built with Framer",
         body: "Interactive eCommerce concept for collectible toy figures, built on Framer. It features a responsive design, smooth navigation, and engaging visuals to create an intuitive and enjoyable user experience.",
-        tools: ["Framer", "Figma", "React.js"],
+        tools: ["Framer", "Figma", "Typescript"],
         github: "https://framer.com/projects/Fighero--tIZKXAbem35WV0doWDzo-7ce7j",
         website: "https://figheroo.framer.website/",
         image: {
@@ -70,7 +70,7 @@ export default function FeaturedSection() {
       sys: { id: "3" },
       fields: {
         title: "Gochisou Bimi",
-        subtitle: "Mobile Application for Inventory Management",
+        subtitle: "Mobile App for Inventory Management",
         body: "Developed for Gochisou Bimi to easily manage and track inventory. It allows users to check stock levels, update products, check history and generate reports, all from their mobile device, making inventory management faster and simpler.",
         tools: ["Dart", "Flutter", "JavaScript", "Node.js", "MongoDB"],
         github: "https://github.com/RON2814/again_inventory_project",

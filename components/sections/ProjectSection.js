@@ -24,7 +24,7 @@ export default function ProjectSection() {
       sys: { id: 2 },
       fields: {
         title: "Staycation",
-        subtitle: "Hotel Booking App",
+        subtitle: "Booking Application",
         body: "Developed using Java Swing for the user interface and MySQL for the backend database. It allows users to easily browse and book accommodations, offering a seamless and intuitive booking experience.",
         tools: ["Java", "Swing", "MySQL"],
         github: "https://github.com/raceczn/staycation",

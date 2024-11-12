@@ -121,25 +121,23 @@
 
 
 .slanted-image {
-  transform: perspective(500px) rotate3d(1, 1, 0, 3deg); /* Default slant effect */
-  transition: transform 0.3s ease; /* Smooth transition for the 3D slant effect */
+  transform: perspective(500px) rotate3d(1, 1, 0, 4deg); 
+  transition: transform 0.3s ease; 
 }
 
-/* Hover effect to reset the slant */
 .slanted-image:hover {
-  transform: perspective(500px) rotate3d(1, 1, 0, 4deg); /* More slant on hover */
+  transform: perspective(500px) rotate3d(1, 1, 0, 5deg); 
 }
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
   .slanted-image {
     padding: 10px;
     transform: none; /* Remove 3D slant on mobile devices */
-    transition: none; /* Disable transition on mobile for smoother performance */
+    transition: none; 
   }
 
   .slanted-image:hover {
-    transform: none; /* Ensure the hover effect is also removed on mobile */
+    transform: none; 
   }
 }
 
