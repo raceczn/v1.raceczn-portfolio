@@ -11,7 +11,7 @@ import Head from 'next/head';
 export default function IntroSection() {
   const one = (
     <h4 className="intro__subtitle heading__4">
-      Hola! <span className="hi">👋</span> I&apos;m Rances Cuizon
+      Hello! <span className="hi">👋</span> I&apos;m Rances Cuizon
     </h4>
   );
   const two = (
