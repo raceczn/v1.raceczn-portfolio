@@ -1,7 +1,7 @@
 
 # Hi there 👋 I'm Rances!
 
-This is my personal portfolio website built with Next.js, React, and SCSS. It showcases my projects, skills, and experiences.
+This is first iteration of my personal portfolio website built with Next.js, React, and SCSS. It showcases my projects, skills, and experiences.
 
 
 [Live Demo](https://rancescuizon.vercel.app/)
