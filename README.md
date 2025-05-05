@@ -1,5 +1,5 @@
 
-# Hi there 👋 I'm Rances!
+# Hi there 👋 I'm Rances! (v1.raceczn-portfolio)
 
 This is the first iteration of my personal portfolio website built with Next.js, React, and SCSS. It showcases my projects, skills, and experiences.
 
