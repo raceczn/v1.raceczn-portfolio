@@ -86,7 +86,7 @@ export default function FeaturedSection() {
 				image: {
 					fields: {
 						file: {
-							src: '/images/projects/talktorial-saas.png', 
+							src: '/images/projects/talktorial.png', 
 							details: {
 								image: {
 									width: 500,
